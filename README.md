@@ -31,18 +31,19 @@ See also [proxmox_kvm] module page.
 None
 
 ## Usage
-Define a list of virtual machines in this format:
+Define a inventory of virtual machines in this format:
 
 ```
-vm_list:
-   - name: vm1
+kvm_guests:
+  hosts:
+   vm1:
      net: {"net0":"virtio=32:5F:B4:35:16:0F,bridge=vmbr0"}
      scsi: {"scsi0":"local-lvm:8,ssd=1"}
      cores: 1
      memory: 1024
      balloon: 512
      vga: vmware
-   - name: vm2
+   vm2:
      net: {"net0":"virtio=32:5F:B4:37:16:0F,bridge=vmbr1"}
      scsi: {"scsi0":"local-lvm:16,ssd=1"}
      cores: 4
