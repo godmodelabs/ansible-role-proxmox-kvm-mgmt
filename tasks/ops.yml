@@ -74,5 +74,4 @@
      virtio: "{{ item['virtio'] if item.get('virtio') else ( global['virtio'] if global['virtio'] else omit ) }}"
      vmid: "{{ item['vmid'] if item.get('vmid') else ( global['vmid'] if global['vmid'] else omit ) }}"
      watchdog: "{{ item['watchdog'] if item.get('watchdog') else ( global['watchdog'] if global['watchdog'] else omit ) }}"
-  delegate_to: localhost
-  with_items: "{{ vm_list | default([]) }}"
+  with_items: "{{ hostvars | inventory_to_vm_list(groups['kvm_guests']) | default([]) }}"

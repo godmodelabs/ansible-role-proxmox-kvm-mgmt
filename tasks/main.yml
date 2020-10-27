@@ -30,4 +30,5 @@
 - import_tasks: ops.yml
   tags: [ 'never', 'started', 'start', 'absent', 'delete', 'stopped', 'stop', 'restarted', 'restart', 'current', 'list', 'update' ]
 
-- shell: /bin/echo "You need to execute playbook with specified tags"
+- shell: echo "You need to execute playbook with specified tags"
+  delegate_to: localhost
