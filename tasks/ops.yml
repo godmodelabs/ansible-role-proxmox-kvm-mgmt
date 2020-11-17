@@ -44,7 +44,6 @@
      onboot: "{{ item['onboot'] if item.get('onboot') else ( global['onboot'] if global['onboot'] else omit ) }}"
      ostype: "{{ item['ostype'] if item.get('ostype') else ( global['ostype'] if global['ostype'] else omit ) }}"
      parallel: "{{ item['parallel'] if item.get('parallel') else ( global['parallel'] if global['parallel'] else omit ) }}"
-     pool: "{{ item['pool'] if item.get('pool') else ( global['pool'] if global['pool'] else omit ) }}"
      protection: "{{ item['protection'] if item.get('protection') else ( global['protection'] if global['protection'] else omit ) }}"
      reboot: "{{ item['reboot'] if item.get('reboot') else ( global['reboot'] if global['reboot'] else omit ) }}"
      revert: "{{ item['revert'] if item.get('revert') else ( global['revert'] if global['revert'] else omit ) }}"
