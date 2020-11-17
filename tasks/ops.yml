@@ -44,7 +44,6 @@
      onboot: "{{ item['onboot'] if item.get('onboot') else global['onboot'] }}"
      ostype: "{{ item['ostype'] if item.get('ostype') else global['ostype'] }}"
      parallel: "{{ item['parallel'] if item.get('parallel') else ( global['parallel'] if global['parallel'] else omit ) }}"
-     pool: "{{ item['pool'] if item.get('pool') else ( global['pool'] if global['pool'] else omit ) }}"
      protection: "{{ item['protection'] if item.get('protection') else ( global['protection'] if global['protection'] else omit ) }}"
      proxmox_default_behavior: "{{ item['proxmox_default_behavior'] if item.get('proxmox_default_behavior') else global['proxmox_default_behavior'] }}"
      reboot: "{{ item['reboot'] if item.get('reboot') else ( global['reboot'] if global['reboot'] else omit ) }}"
