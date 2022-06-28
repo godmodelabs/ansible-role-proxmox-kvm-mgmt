@@ -46,7 +46,7 @@
      ostype: "{{ item['ostype'] if item.get('ostype') else global['ostype'] }}"
      parallel: "{{ item['parallel'] if item.get('parallel') else ( global['parallel'] if global['parallel'] else omit ) }}"
      protection: "{{ item['protection'] if item.get('protection') else ( global['protection'] if global['protection'] else omit ) }}"
-     proxmox_default_behavior: "{{ item['proxmox_default_behavior'] if item.get('proxmox_default_behavior') else global['proxmox_default_behavior'] }}"
+     # proxmox_default_behavior: "{{ item['proxmox_default_behavior'] if item.get('proxmox_default_behavior') else global['proxmox_default_behavior'] }}"
      reboot: "{{ item['reboot'] if item.get('reboot') else ( global['reboot'] if global['reboot'] else omit ) }}"
      revert: "{{ item['revert'] if item.get('revert') else ( global['revert'] if global['revert'] else omit ) }}"
      sata: "{{ item['sata'] if item.get('sata') else ( global['sata'] if global['sata'] else omit ) }}"

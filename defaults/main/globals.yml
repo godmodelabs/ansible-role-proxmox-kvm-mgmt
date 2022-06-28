@@ -58,7 +58,7 @@ global:
   pool: ''
   protection: ''
   # Set behavior to compatibility because of "force" bug
-  proxmox_default_behavior: 'no_defaults'
+  # proxmox_default_behavior: 'no_defaults'
   reboot: ''
   revert: ''
   sata: ''
