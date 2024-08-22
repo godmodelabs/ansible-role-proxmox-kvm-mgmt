@@ -8,7 +8,7 @@ global_keyboard: ''
 # Overwrite default variables for all VMs
 global:
   acpi: 'yes'
-  # Enable QEMU Agent, remember to install qemu-guest-agent on VMs 
+  # Enable QEMU Agent, remember to install qemu-guest-agent on VMs
   agent: 'yes'
   api_host: '{{ global_api_host }}'
   api_password: '{{ credentials.password if credentials.get("password") else lookup("env","PROXMOX_PASSWORD") }}'
