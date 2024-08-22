@@ -1,5 +1,5 @@
 ---
-# See globals.yml for all variables 
+# See globals.yml for all variables
 vm_list:
   - name: vm-name
     net: {"net0":"virtio=32:5F:B4:37:16:0F,bridge=vmbr1"}

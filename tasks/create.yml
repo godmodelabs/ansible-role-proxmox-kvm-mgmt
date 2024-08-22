@@ -77,5 +77,5 @@
      vmid: "{{ item['vmid'] if item.get('vmid') else ( global['vmid'] if global['vmid'] else omit ) }}"
      watchdog: "{{ item['watchdog'] if item.get('watchdog') else ( global['watchdog'] if global['watchdog'] else omit ) }}"
   loop_control:
-    label: "name: {{ item.name }}, node: {{ item.node }}"
+     label: "name: {{ item.name }}, node: {{ item.node }}"
   with_items: "{{ hostvars | inventory_to_vm_list(groups['kvm_guests']) | default([]) }}"
